@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     }
     
     func getUserData() {
-        
         let userUrlString = "https://api.github.com/users/0"
+    
         guard let url = URL(string: userUrlString) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, err) in
             guard let data = data else { return }
