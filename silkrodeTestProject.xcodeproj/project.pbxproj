@@ -16,6 +16,7 @@
 		7F4509E427469AA900304DC8 /* silkrodeTestProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4509E327469AA900304DC8 /* silkrodeTestProjectTests.swift */; };
 		7F4509EE27469AA900304DC8 /* silkrodeTestProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4509ED27469AA900304DC8 /* silkrodeTestProjectUITests.swift */; };
 		7F4509F027469AA900304DC8 /* silkrodeTestProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4509EF27469AA900304DC8 /* silkrodeTestProjectUITestsLaunchTests.swift */; };
+		7F58444D2747CCB300A88369 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F58444C2747CCB300A88369 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7F4509E927469AA900304DC8 /* silkrodeTestProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = silkrodeTestProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4509ED27469AA900304DC8 /* silkrodeTestProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = silkrodeTestProjectUITests.swift; sourceTree = "<group>"; };
 		7F4509EF27469AA900304DC8 /* silkrodeTestProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = silkrodeTestProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7F58444C2747CCB300A88369 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				7F4509D527469AA900304DC8 /* Assets.xcassets */,
 				7F4509D727469AA900304DC8 /* LaunchScreen.storyboard */,
 				7F4509DA27469AA900304DC8 /* Info.plist */,
+				7F58444C2747CCB300A88369 /* User.swift */,
 			);
 			path = silkrodeTestProject;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F58444D2747CCB300A88369 /* User.swift in Sources */,
 				7F4509D127469AA800304DC8 /* ViewController.swift in Sources */,
 				7F4509CD27469AA800304DC8 /* AppDelegate.swift in Sources */,
 				7F4509CF27469AA800304DC8 /* SceneDelegate.swift in Sources */,

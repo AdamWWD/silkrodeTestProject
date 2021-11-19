@@ -21,9 +21,8 @@ class ViewController: UIViewController {
         URLSession.shared.dataTask(with: url) { (data, response, err) in
             guard let data = data else { return }
             do {
-                
-                print("")
-                print(data)
+                let user = try JSONDecoder().decode(User.self, from: data)
+                print(user)
 //                let user = try JSONDecoder().decode(User.self, from: data)
                 
             } catch let jsonErr {
