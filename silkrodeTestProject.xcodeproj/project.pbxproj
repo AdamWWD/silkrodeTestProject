@@ -20,6 +20,8 @@
 		7FFEE38B274847AC0070A2AA /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFEE38A274847AC0070A2AA /* UserCell.swift */; };
 		7FFEE38D274849650070A2AA /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFEE38C274849650070A2AA /* UserViewModel.swift */; };
 		7FFEE391274B2EDD0070A2AA /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFEE390274B2EDD0070A2AA /* UserDetailViewController.swift */; };
+		7FFEE395274B51FF0070A2AA /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFEE394274B51FF0070A2AA /* MineViewController.swift */; };
+		7FFEE398274B7D100070A2AA /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFEE397274B7D100070A2AA /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		7FFEE38A274847AC0070A2AA /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		7FFEE38C274849650070A2AA /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		7FFEE390274B2EDD0070A2AA /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		7FFEE394274B51FF0070A2AA /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		7FFEE397274B7D100070A2AA /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		7F4509CB27469AA800304DC8 /* silkrodeTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				7FFEE396274B78AB0070A2AA /* Service */,
 				7FFEE389274843F90070A2AA /* ViewModel */,
 				7FFEE388274843ED0070A2AA /* Model */,
 				7FFEE387274843E10070A2AA /* View */,
@@ -143,6 +148,7 @@
 			children = (
 				7F4509D027469AA800304DC8 /* UsersTableViewController.swift */,
 				7FFEE390274B2EDD0070A2AA /* UserDetailViewController.swift */,
+				7FFEE394274B51FF0070A2AA /* MineViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +175,14 @@
 				7FFEE38C274849650070A2AA /* UserViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7FFEE396274B78AB0070A2AA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7FFEE397274B7D100070A2AA /* Service.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,7 +319,9 @@
 				7FFEE391274B2EDD0070A2AA /* UserDetailViewController.swift in Sources */,
 				7F58444D2747CCB300A88369 /* User.swift in Sources */,
 				7FFEE38D274849650070A2AA /* UserViewModel.swift in Sources */,
+				7FFEE395274B51FF0070A2AA /* MineViewController.swift in Sources */,
 				7F4509D127469AA800304DC8 /* UsersTableViewController.swift in Sources */,
+				7FFEE398274B7D100070A2AA /* Service.swift in Sources */,
 				7F4509CD27469AA800304DC8 /* AppDelegate.swift in Sources */,
 				7FFEE38B274847AC0070A2AA /* UserCell.swift in Sources */,
 				7F4509CF27469AA800304DC8 /* SceneDelegate.swift in Sources */,
