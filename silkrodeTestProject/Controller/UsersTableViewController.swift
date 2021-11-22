@@ -79,8 +79,6 @@ class UsersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        print("show will display:", indexPath.row)
-    
         let userViewModelsCount = userViewModels?.count ?? 0
         if indexPath.row  == userViewModelsCount - 1 {
             getUsersData(starIndex: userViewModelsCount, endIndex: userViewModelsCount + 10)
