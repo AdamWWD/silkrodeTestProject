@@ -25,34 +25,39 @@ class MineViewController: UIViewController {
     }
     
     func getMineData() {
-        
         Service.shared.getMineData { (mine, error) in
+            guard let mine = mine else {
+                print("mine data is nil")
+                return
+            }
+            
             print(mine)
-//            self.mineAvartarImage
-//            
-//            
-//            self.mineAvartarImage.image = mine?.avatar_url
+            self.mineAvatarImage.layer.cornerRadius = 50
+            self.mineAvatarImage.clipsToBounds = true
+            
+            guard let url = URL(string: mine.avatar_url ?? "") else { return }
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let data = data, let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self.mineAvatarImage.image = image
+                    }
+                }
+            }
+            task.resume()
+            
+            self.mineNameLabel.text = mine.name
+            self.loginLabel.text = mine.login
+            
+            let followers = mine.followers ?? 0
+            let following = mine.following ?? 0
+
+            self.followersLabel.text = "\(String(describing: followers)) followers"+"・"
+            self.followingLabel.text = "\(String(describing: following)) following"+"・"
+            
+            self.emailLabel.text = mine.email
+            
+            
+            
         }
-        
-//        let userUrlString = "https://api.github.com/users/AdamWWD"
-//        guard let url = URL(string: userUrlString) else { return }
-//        URLSession.shared.dataTask(with: url) { (data, response, err) in
-//            guard let data = data else { return }
-//            do {
-//                let user = try JSONDecoder().decode(User.self, from: data)
-//                let userViewModel: UserViewModel = UserViewModel(user: user)
-//                self.userViewModels.append(userViewModel)
-//                print(user)
-//                print(self.userViewModels)
-//                print("self.userViewModels.count:", self.userViewModels.count)
-//                DispatchQueue.main.async {
-//                    self.tableView.reloadData()
-//                }
-//            } catch let jsonErr {
-//                print("Error serializing:\(jsonErr)")
-//            }
-//        }.resume()
-        
-        
     }
 }

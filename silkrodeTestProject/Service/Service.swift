@@ -67,10 +67,7 @@ class Service:NSObject {
             } catch let jsonErr {
                 print("Error serializing:\(jsonErr)")
             }
-        }
-        
-        
-        
+        }.resume()
     }
     
 }
