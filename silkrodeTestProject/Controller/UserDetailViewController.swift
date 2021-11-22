@@ -8,7 +8,7 @@
 import UIKit
 
 class UserDetailViewController: UIViewController {
-    @IBOutlet weak var userAvartarImage: UIImageView!
+    @IBOutlet weak var userAvatarImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userNameLabelForDownView: UILabel!
     @IBOutlet weak var userLocationLabel: UILabel!
@@ -19,17 +19,19 @@ class UserDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showUserDetailData()
+        self.navigationItem.title = ""
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     func showUserDetailData() {
-        userAvartarImage.layer.cornerRadius = 75
-        userAvartarImage.clipsToBounds = true
+        userAvatarImage.layer.cornerRadius = 75
+        userAvatarImage.clipsToBounds = true
         
         guard let url = URL(string: userViewModel.avatar_url) else { return }
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data, let image = UIImage(data: data) {
                 DispatchQueue.main.async {
-                    self.userAvartarImage.image = image
+                    self.userAvatarImage.image = image
                 }
             }
         }

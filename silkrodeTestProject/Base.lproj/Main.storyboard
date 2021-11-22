@@ -277,7 +277,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="userAvartarImage" destination="Gy7-am-neN" id="ao3-bn-dpm"/>
+                        <outlet property="userAvatarImage" destination="Gy7-am-neN" id="ao3-bn-dpm"/>
                         <outlet property="userBlogLabel" destination="1C6-U2-StP" id="5G7-cJ-tY0"/>
                         <outlet property="userLocationLabel" destination="0tH-6D-Bgi" id="pJC-a4-ra1"/>
                         <outlet property="userName" destination="8eF-k1-Ok5" id="jMM-jj-H5c"/>
@@ -412,6 +412,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dKf-YV-IIF"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="qmc-MK-l5a" id="hCM-EQ-8sf"/>
+                        <outlet property="followersLabel" destination="qQJ-27-1GX" id="JeT-Rr-gTa"/>
+                        <outlet property="followingLabel" destination="e8g-Wq-jGZ" id="1jU-BN-b10"/>
+                        <outlet property="loginLabel" destination="d4a-XZ-H82" id="Zpm-bp-gql"/>
+                        <outlet property="mineAvatarImage" destination="L01-gf-yZW" id="IQQ-sp-WFK"/>
+                        <outlet property="mineBackGroundImage" destination="QEH-Zr-mac" id="hbF-Ga-tKK"/>
+                        <outlet property="mineNameLabel" destination="fhV-0D-gLk" id="SGL-xc-APT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="By3-fd-EDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

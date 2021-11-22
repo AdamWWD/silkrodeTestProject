@@ -14,6 +14,9 @@ class UserCell: UITableViewCell {
     
     var userViewModel: UserViewModel! {
         didSet {
+            avatar.layer.cornerRadius = 50
+            avatar.clipsToBounds = true
+            
             guard let url = URL(string: userViewModel.avatar_url) else { return }
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if let data = data, let image = UIImage(data: data) {

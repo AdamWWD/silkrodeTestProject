@@ -35,7 +35,9 @@ class Service:NSObject {
                     print("self.userViewModels.count:", self.userViewModels.count)
                     
                     if self.userViewModels.count > self.userDataMax {
-                        completion(self.userViewModels, nil)
+                        DispatchQueue.main.async {
+                            completion(self.userViewModels, nil)
+                        }
                     }
                 } catch let jsonErr {
                     print("Error serializing:\(jsonErr)")
@@ -44,5 +46,31 @@ class Service:NSObject {
         }
     }
     
+    func getMineData(completion: @escaping (User?, Error?) -> ()) {
+        let mineUrlString = "https://api.github.com/users/AdamWWD"
+        guard let url = URL(string: mineUrlString) else { return }
+        URLSession.shared.dataTask(with: url) { (data, response, err) in
+            if let err = err {
+                completion(nil, err)
+                print("Failed to get mine data")
+                return
+            }
+            
+            guard let data = data else { return }
+            do {
+                let mine = try JSONDecoder().decode(User.self, from: data)
+                print(mine)
+                DispatchQueue.main.async {
+                    completion(mine, nil)
+                }
+                
+            } catch let jsonErr {
+                print("Error serializing:\(jsonErr)")
+            }
+        }
+        
+        
+        
+    }
     
 }
