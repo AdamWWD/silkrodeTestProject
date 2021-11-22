@@ -78,5 +78,6 @@ class UsersTableViewController: UITableViewController {
         vc.userViewModel = userViewModel
         present(vc, animated: true, completion: nil)
     }
+    
 }
 
