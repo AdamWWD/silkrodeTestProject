@@ -15,7 +15,7 @@ class UsersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Github"
-        getUsersData()
+        getUsersData(starIndex:0, endIndex:10)
         setUpSwipe()
     }
     
@@ -43,8 +43,8 @@ class UsersTableViewController: UITableViewController {
         }
     }
     
-    func getUsersData() {
-        Service.shared.getUsersData { arrUserViewModels, err in
+    func getUsersData(starIndex:Int, endIndex:Int) {
+        Service.shared.getUsersData(userDataMin: starIndex, userDataMax: endIndex) { arrUserViewModels, err in
             if let err = err {
                 print("Failed to get user data:", err)
                 return
@@ -77,6 +77,16 @@ class UsersTableViewController: UITableViewController {
         let userViewModel = userViewModels?[indexPath.row]
         vc.userViewModel = userViewModel
         present(vc, animated: true, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        print("show will display:", indexPath.row)
+    
+        let userViewModelsCount = userViewModels?.count ?? 0
+        if indexPath.row  == userViewModelsCount - 1 {
+            print( "get new user data")
+            getUsersData(starIndex: userViewModelsCount, endIndex: userViewModelsCount + 10)
+        }
     }
     
 }

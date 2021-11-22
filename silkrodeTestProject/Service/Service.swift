@@ -11,11 +11,12 @@ class Service:NSObject {
     static let shared = Service()
     
     var userViewModels = [UserViewModel]()
-    var userDataMin = 0
-    var userDataMax = 1
+//    var userDataMin = 0
+//    var userDataMax = 10
     
-    func getUsersData(completion: @escaping ([UserViewModel]?, Error?) -> ()) {
+    func getUsersData(userDataMin:Int, userDataMax:Int, completion: @escaping ([UserViewModel]?, Error?) -> ()) {
         for i in userDataMin...userDataMax {
+            print("i:", i)
             let userUrlString = "https://api.github.com/users/" + String(i)
             guard let url = URL(string: userUrlString) else { return }
             URLSession.shared.dataTask(with: url) { (data, response, err) in
@@ -28,9 +29,11 @@ class Service:NSObject {
                 guard let data = data else { return }
                 do {
                     let user = try JSONDecoder().decode(User.self, from: data)
+                    print(user)
                     let userViewModel: UserViewModel = UserViewModel(user: user)
                     self.userViewModels.append(userViewModel)
-                    if self.userViewModels.count > self.userDataMax {
+                    print("self.userViewModels.count:", self.userViewModels.count)
+                    if self.userViewModels.count >= userDataMax - 1 {
                         DispatchQueue.main.async {
                             completion(self.userViewModels, nil)
                         }
