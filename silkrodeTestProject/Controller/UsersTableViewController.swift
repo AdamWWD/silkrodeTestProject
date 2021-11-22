@@ -27,13 +27,12 @@ class UsersTableViewController: UITableViewController {
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
         swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(swipeLeft)
-        // below code create swipe gestures function
     }
     
     @objc func swiped(_ gesture: UISwipeGestureRecognizer) {
         if gesture.direction == .left {
             if (self.tabBarController?.selectedIndex)! < 2
-            { // set here  your total tabs
+            {
                 self.tabBarController?.selectedIndex += 1
             }
         } else if gesture.direction == .right {
@@ -84,10 +83,8 @@ class UsersTableViewController: UITableViewController {
     
         let userViewModelsCount = userViewModels?.count ?? 0
         if indexPath.row  == userViewModelsCount - 1 {
-            print( "get new user data")
             getUsersData(starIndex: userViewModelsCount, endIndex: userViewModelsCount + 10)
         }
     }
-    
 }
 

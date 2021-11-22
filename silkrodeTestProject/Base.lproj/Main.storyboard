@@ -31,7 +31,7 @@
         <scene sceneID="gV9-m7-HXc">
             <objects>
                 <navigationController id="dkt-A6-sSG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="User" id="spV-j0-QRz"/>
+                    <tabBarItem key="tabBarItem" title="User" selectedImage="icons8-arms-up-30" id="spV-j0-QRz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4gQ-uL-dur">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -145,10 +145,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-multiply-30" translatesAutoresizingMaskIntoConstraints="NO" id="YMK-dZ-erU">
+                                        <rect key="frame" x="18" y="8" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="TFI-Y7-waZ"/>
+                                            <constraint firstAttribute="height" constant="25" id="vnf-ZO-2Bb"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="YMK-dZ-erU" firstAttribute="leading" secondItem="dOt-mi-NNw" secondAttribute="leading" constant="18" id="AmD-YF-DxM"/>
                                     <constraint firstItem="Gy7-am-neN" firstAttribute="top" secondItem="dOt-mi-NNw" secondAttribute="top" constant="41" id="K5l-Rr-mP0"/>
+                                    <constraint firstItem="YMK-dZ-erU" firstAttribute="top" secondItem="dOt-mi-NNw" secondAttribute="top" constant="8" id="MmJ-pN-iiR"/>
                                     <constraint firstItem="Gy7-am-neN" firstAttribute="centerX" secondItem="dOt-mi-NNw" secondAttribute="centerX" id="eJu-Xa-JSx"/>
                                     <constraint firstItem="8eF-k1-Ok5" firstAttribute="top" secondItem="Gy7-am-neN" secondAttribute="bottom" constant="10" id="hLR-ho-mrf"/>
                                     <constraint firstItem="8eF-k1-Ok5" firstAttribute="centerX" secondItem="dOt-mi-NNw" secondAttribute="centerX" id="pUB-3G-Zc8"/>
@@ -170,7 +179,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKV-v6-wcd" userLabel="NameView">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WIF-VE-fJw">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-person-30" translatesAutoresizingMaskIntoConstraints="NO" id="WIF-VE-fJw">
                                                         <rect key="frame" x="33" y="25" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="2dS-Ub-q2y"/>
@@ -197,7 +206,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ry-rs-urv" userLabel="LocationView">
                                                 <rect key="frame" x="0.0" y="100" width="414" height="100"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xtH-iN-tzr">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-place-marker-30" translatesAutoresizingMaskIntoConstraints="NO" id="xtH-iN-tzr">
                                                         <rect key="frame" x="33" y="25" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="7eE-L3-V8h"/>
@@ -224,7 +233,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NA5-WB-hcX" userLabel="BlogView">
                                                 <rect key="frame" x="0.0" y="200" width="414" height="100"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d2X-Ww-nlW">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-link-30" translatesAutoresizingMaskIntoConstraints="NO" id="d2X-Ww-nlW">
                                                         <rect key="frame" x="33" y="25" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="JUM-H1-qKb"/>
@@ -277,6 +286,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dismissImage" destination="YMK-dZ-erU" id="r3o-Ku-Lvq"/>
                         <outlet property="userAvatarImage" destination="Gy7-am-neN" id="ao3-bn-dpm"/>
                         <outlet property="userBlogLabel" destination="1C6-U2-StP" id="5G7-cJ-tY0"/>
                         <outlet property="userLocationLabel" destination="0tH-6D-Bgi" id="pJC-a4-ra1"/>
@@ -340,14 +350,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yb6-iI-4nI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-myspace-30" translatesAutoresizingMaskIntoConstraints="NO" id="Yb6-iI-4nI">
                                 <rect key="frame" x="30" y="445" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Fxu-ZM-htu"/>
                                     <constraint firstAttribute="width" constant="25" id="acd-zW-p6m"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VCr-fV-Kvs">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-mail-24" translatesAutoresizingMaskIntoConstraints="NO" id="VCr-fV-Kvs">
                                 <rect key="frame" x="30" y="478" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="LwU-nQ-FjA"/>
@@ -428,7 +438,7 @@
         <scene sceneID="fJj-cG-2Vu">
             <objects>
                 <navigationController id="RWG-rU-IoW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mine" id="pop-c5-A8u"/>
+                    <tabBarItem key="tabBarItem" title="Mine" selectedImage="icons8-select-30" id="pop-c5-A8u"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ThS-uU-6aE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -448,6 +458,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icons8-arms-up-30" width="30" height="30"/>
+        <image name="icons8-link-30" width="30" height="30"/>
+        <image name="icons8-mail-24" width="24" height="24"/>
+        <image name="icons8-multiply-30" width="30" height="30"/>
+        <image name="icons8-myspace-30" width="30" height="30"/>
+        <image name="icons8-person-30" width="30" height="30"/>
+        <image name="icons8-place-marker-30" width="30" height="30"/>
+        <image name="icons8-select-30" width="30" height="30"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

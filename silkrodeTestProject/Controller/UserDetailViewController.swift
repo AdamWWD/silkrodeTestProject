@@ -13,6 +13,7 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var userNameLabelForDownView: UILabel!
     @IBOutlet weak var userLocationLabel: UILabel!
     @IBOutlet weak var userBlogLabel: UILabel!
+    @IBOutlet weak var dismissImage: UIImageView!
     
     var userViewModel: UserViewModel!
     
@@ -21,6 +22,15 @@ class UserDetailViewController: UIViewController {
         showUserDetailData()
         self.navigationItem.title = ""
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(tapDetected))
+        self.dismissImage.isUserInteractionEnabled = true
+        self.dismissImage.addGestureRecognizer(singleTap)
+    }
+
+    //Action
+    @objc func tapDetected() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func showUserDetailData() {
