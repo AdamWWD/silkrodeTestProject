@@ -19,6 +19,7 @@
 		7F58444D2747CCB300A88369 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F58444C2747CCB300A88369 /* User.swift */; };
 		7FFEE38B274847AC0070A2AA /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFEE38A274847AC0070A2AA /* UserCell.swift */; };
 		7FFEE38D274849650070A2AA /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFEE38C274849650070A2AA /* UserViewModel.swift */; };
+		7FFEE391274B2EDD0070A2AA /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFEE390274B2EDD0070A2AA /* UserDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		7F58444C2747CCB300A88369 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7FFEE38A274847AC0070A2AA /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		7FFEE38C274849650070A2AA /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		7FFEE390274B2EDD0070A2AA /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				7F4509D027469AA800304DC8 /* UsersTableViewController.swift */,
+				7FFEE390274B2EDD0070A2AA /* UserDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFEE391274B2EDD0070A2AA /* UserDetailViewController.swift in Sources */,
 				7F58444D2747CCB300A88369 /* User.swift in Sources */,
 				7FFEE38D274849650070A2AA /* UserViewModel.swift in Sources */,
 				7F4509D127469AA800304DC8 /* UsersTableViewController.swift in Sources */,

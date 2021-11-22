@@ -20,7 +20,7 @@ class UsersTableViewController: UITableViewController {
     }
     
     func getUsersData() {
-        for i in 0...5 {
+        for i in 0...1 {
             let userUrlString = "https://api.github.com/users/" + String(i)
             guard let url = URL(string: userUrlString) else { return }
             URLSession.shared.dataTask(with: url) { (data, response, err) in
@@ -54,9 +54,17 @@ class UsersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         print(indexPath)
-
+    
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "UserDetailViewController") as? UserDetailViewController else {
+            print("vc for UserdetailViewController is nil.")
+            return
+        }
+        
+        let userViewModel = userViewModels[indexPath.row]
+        vc.userViewModel = userViewModel
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
