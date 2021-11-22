@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F4509CD27469AA800304DC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4509CC27469AA800304DC8 /* AppDelegate.swift */; };
 		7F4509CF27469AA800304DC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4509CE27469AA800304DC8 /* SceneDelegate.swift */; };
-		7F4509D127469AA800304DC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4509D027469AA800304DC8 /* ViewController.swift */; };
+		7F4509D127469AA800304DC8 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4509D027469AA800304DC8 /* UsersTableViewController.swift */; };
 		7F4509D427469AA800304DC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4509D227469AA800304DC8 /* Main.storyboard */; };
 		7F4509D627469AA900304DC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F4509D527469AA900304DC8 /* Assets.xcassets */; };
 		7F4509D927469AA900304DC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4509D727469AA900304DC8 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,8 @@
 		7F4509EE27469AA900304DC8 /* silkrodeTestProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4509ED27469AA900304DC8 /* silkrodeTestProjectUITests.swift */; };
 		7F4509F027469AA900304DC8 /* silkrodeTestProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4509EF27469AA900304DC8 /* silkrodeTestProjectUITestsLaunchTests.swift */; };
 		7F58444D2747CCB300A88369 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F58444C2747CCB300A88369 /* User.swift */; };
+		7FFEE38B274847AC0070A2AA /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFEE38A274847AC0070A2AA /* UserCell.swift */; };
+		7FFEE38D274849650070A2AA /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFEE38C274849650070A2AA /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,7 @@
 		7F4509C927469AA800304DC8 /* silkrodeTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = silkrodeTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4509CC27469AA800304DC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F4509CE27469AA800304DC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F4509D027469AA800304DC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F4509D027469AA800304DC8 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		7F4509D327469AA800304DC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F4509D527469AA900304DC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F4509D827469AA900304DC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		7F4509ED27469AA900304DC8 /* silkrodeTestProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = silkrodeTestProjectUITests.swift; sourceTree = "<group>"; };
 		7F4509EF27469AA900304DC8 /* silkrodeTestProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = silkrodeTestProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7F58444C2747CCB300A88369 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7FFEE38A274847AC0070A2AA /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		7FFEE38C274849650070A2AA /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +105,16 @@
 		7F4509CB27469AA800304DC8 /* silkrodeTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				7FFEE389274843F90070A2AA /* ViewModel */,
+				7FFEE388274843ED0070A2AA /* Model */,
+				7FFEE387274843E10070A2AA /* View */,
+				7FFEE386274843CF0070A2AA /* Controller */,
 				7F4509CC27469AA800304DC8 /* AppDelegate.swift */,
 				7F4509CE27469AA800304DC8 /* SceneDelegate.swift */,
-				7F4509D027469AA800304DC8 /* ViewController.swift */,
 				7F4509D227469AA800304DC8 /* Main.storyboard */,
 				7F4509D527469AA900304DC8 /* Assets.xcassets */,
 				7F4509D727469AA900304DC8 /* LaunchScreen.storyboard */,
 				7F4509DA27469AA900304DC8 /* Info.plist */,
-				7F58444C2747CCB300A88369 /* User.swift */,
 			);
 			path = silkrodeTestProject;
 			sourceTree = "<group>";
@@ -128,6 +134,38 @@
 				7F4509EF27469AA900304DC8 /* silkrodeTestProjectUITestsLaunchTests.swift */,
 			);
 			path = silkrodeTestProjectUITests;
+			sourceTree = "<group>";
+		};
+		7FFEE386274843CF0070A2AA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7F4509D027469AA800304DC8 /* UsersTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7FFEE387274843E10070A2AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7FFEE38A274847AC0070A2AA /* UserCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7FFEE388274843ED0070A2AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F58444C2747CCB300A88369 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7FFEE389274843F90070A2AA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7FFEE38C274849650070A2AA /* UserViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +300,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F58444D2747CCB300A88369 /* User.swift in Sources */,
-				7F4509D127469AA800304DC8 /* ViewController.swift in Sources */,
+				7FFEE38D274849650070A2AA /* UserViewModel.swift in Sources */,
+				7F4509D127469AA800304DC8 /* UsersTableViewController.swift in Sources */,
 				7F4509CD27469AA800304DC8 /* AppDelegate.swift in Sources */,
+				7FFEE38B274847AC0070A2AA /* UserCell.swift in Sources */,
 				7F4509CF27469AA800304DC8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +491,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,6 +520,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
