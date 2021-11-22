@@ -55,7 +55,6 @@ class Service:NSObject {
             guard let data = data else { return }
             do {
                 let mine = try JSONDecoder().decode(User.self, from: data)
-                print(mine)
                 DispatchQueue.main.async {
                     completion(mine, nil)
                 }
