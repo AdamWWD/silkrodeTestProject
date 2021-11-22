@@ -44,8 +44,6 @@ class UsersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
-    
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "UserDetailViewController") as? UserDetailViewController else {
             print("vc for UserdetailViewController is nil.")
             return
@@ -53,7 +51,7 @@ class UsersTableViewController: UITableViewController {
         
         let userViewModel = userViewModels?[indexPath.row]
         vc.userViewModel = userViewModel
-        self.navigationController?.pushViewController(vc, animated: true)
+        present(vc, animated: true, completion: nil)
     }
 }
 

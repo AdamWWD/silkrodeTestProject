@@ -8,8 +8,6 @@
 import UIKit
 
 class MineViewController: UIViewController {
-    
-    
     @IBOutlet weak var mineBackGroundImage: UIImageView!
     @IBOutlet weak var mineAvatarImage: UIImageView!
     @IBOutlet weak var mineNameLabel: UILabel!
@@ -31,7 +29,6 @@ class MineViewController: UIViewController {
                 return
             }
             
-            print(mine)
             self.mineAvatarImage.layer.cornerRadius = 50
             self.mineAvatarImage.clipsToBounds = true
             
@@ -55,9 +52,6 @@ class MineViewController: UIViewController {
             self.followingLabel.text = "\(String(describing: following)) following"+"・"
             
             self.emailLabel.text = mine.email
-            
-            
-            
         }
     }
 }

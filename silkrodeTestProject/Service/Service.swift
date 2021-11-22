@@ -30,10 +30,6 @@ class Service:NSObject {
                     let user = try JSONDecoder().decode(User.self, from: data)
                     let userViewModel: UserViewModel = UserViewModel(user: user)
                     self.userViewModels.append(userViewModel)
-                    print(user)
-                    print(self.userViewModels)
-                    print("self.userViewModels.count:", self.userViewModels.count)
-                    
                     if self.userViewModels.count > self.userDataMax {
                         DispatchQueue.main.async {
                             completion(self.userViewModels, nil)
